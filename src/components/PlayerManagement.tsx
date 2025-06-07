@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -168,13 +167,13 @@ const PlayerManagement = () => {
 
           {/* Filters */}
           <div className="flex flex-col md:flex-row gap-4 mb-6">
-            <div className="flex-1">
+            <div className="flex-1 relative">
+              <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <Input
                 placeholder="Search players..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="bg-slate-700/50 border-green-500/20 text-white placeholder:text-gray-400"
-                icon={<Search className="h-4 w-4" />}
+                className="bg-slate-700/50 border-green-500/20 text-white placeholder:text-gray-400 pl-10"
               />
             </div>
             <Select value={positionFilter} onValueChange={setPositionFilter}>
